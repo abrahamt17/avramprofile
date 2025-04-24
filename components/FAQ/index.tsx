@@ -1,107 +1,53 @@
 "use client";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import { useState } from "react";
-import FAQItem from "./FAQItem";
-import faqData from "./faqData";
+import React, { useState } from "react";
 
 const FAQ = () => {
-  const [activeFaq, setActiveFaq] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(null);
 
-  const handleFaqToggle = (id: number) => {
-    activeFaq === id ? setActiveFaq(0) : setActiveFaq(id);
+  const faqs = [
+    {
+      question: "What technologies do you specialize in?",
+      answer:
+        "I specialize in Front-End technologies like React, Next.js, Tailwind CSS, TypeScript, and Redux, along with experience in Python REST APIs and databases.",
+    },
+    {
+      question: "What kind of projects have you worked on?",
+      answer:
+        "I have worked on various projects including web applications, dashboards, and API integrations across different industries.",
+    },
+    {
+      question: "Are you open to freelance or full-time opportunities?",
+      answer:
+        "Yes, I am open to both freelance projects and full-time positions that align with my skills and career goals.",
+    },
+  ];
+
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
   };
 
   return (
     <>
       {/* <!-- ===== FAQ Start ===== --> */}
-      <section className="overflow-hidden pb-20 lg:pb-25 xl:pb-30">
-        <div className="relative mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0">
-          <div className="absolute -bottom-16 -z-1 h-full w-full">
-            <Image
-              fill
-              src="/images/shape/shape-dotted-light.svg"
-              alt="Dotted"
-              className="dark:hidden"
-            />
-            <Image
-              fill
-              src="/images/shape/shape-dotted-light.svg"
-              alt="Dotted"
-              className="hidden dark:block"
-            />
-          </div>
-          <div className="flex flex-wrap gap-8 md:flex-nowrap md:items-center xl:gap-32.5">
-            <motion.div
-              variants={{
-                hidden: {
-                  opacity: 0,
-                  x: -20,
-                },
-
-                visible: {
-                  opacity: 1,
-                  x: 0,
-                },
-              }}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 1, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="animate_left md:w-2/5 lg:w-1/2"
-            >
-              <span className="font-medium uppercase text-black dark:text-white">
-                OUR FAQS
-              </span>
-              <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">
-                Frequently Asked
-                <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg2 dark:before:bg-titlebgdark">
-                  Questions
-                </span>
-              </h2>
-
-              <div>
-                <a
-                  href="#"
-                  className="group mt-7.5 inline-flex items-center gap-2.5 text-black hover:text-primary dark:text-white dark:hover:text-primary"
+      <section className="py-20 lg:py-25 xl:py-30">
+        <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
+          <h2 className="mb-10 text-center text-3xl font-bold text-black dark:text-white">
+            Frequently Asked Questions
+          </h2>
+          <div className="max-w-3xl mx-auto">
+            {faqs.map((faq, index) => (
+              <div key={index} className="mb-6 border-b border-stroke dark:border-strokedark">
+                <button
+                  onClick={() => toggleFAQ(index)}
+                  className="w-full py-4 text-left text-lg font-semibold text-black dark:text-white"
                 >
-                  <button
-                    aria-label="get started button"
-                    className="ml-[450px] mt-10  items-center justify-center rounded-full  bg-primary px-7.5 py-2.5 text-white duration-300 ease-in-out hover:bg-blue-600 dark:bg-btndark dark:hover:bg-blackho sm:m-auto"
-                  >
-                    Know More
-                  </button>
-                </a>
+                  {faq.question}
+                </button>
+                {activeIndex === index && (
+                  <p className="pt-2 text-black dark:text-white">{faq.answer}</p>
+                )}
               </div>
-            </motion.div>
-
-            <motion.div
-              variants={{
-                hidden: {
-                  opacity: 0,
-                  x: 20,
-                },
-
-                visible: {
-                  opacity: 1,
-                  x: 0,
-                },
-              }}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 1, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="animate_right shadow-2xl rounded-2xl md:w-3/5 lg:w-[80%]"
-            >
-              <div className="rounded-lg bg-white shadow-solid-8 dark:border dark:border-strokedark dark:bg-blacksection">
-                {faqData.map((faq, key) => (
-                  <FAQItem
-                    key={key}
-                    faqData={{ ...faq, activeFaq, handleFaqToggle }}
-                  />
-                ))}
-              </div>
-            </motion.div>
+            ))}
           </div>
         </div>
       </section>

@@ -40,18 +40,18 @@ const Header = () => {
           <a href="/">
             <div className="flex flex-col">
               <span className="hidden text-4xl font-extrabold text-blue-500 dark:block">
-                TRIVIUM
+                AVRAM
               </span>
               <span className="hidden text-xl  font-normal dark:block">
-                STUDIOS™
+                Abraham Tikuye  
               </span>
             </div>
             <div className="flex flex-col">
               <span className="text-4xl font-extrabold text-blue-500 dark:hidden">
-                TRIVIUM
+                AVRAM
               </span>
               <span className="text-xl font-normal  dark:hidden">
-                STUDIOS™
+                Abraham Tikuye 
               </span>
             </div>
           </a>
@@ -175,7 +175,5 @@ const Header = () => {
     </header>
   );
 };
-
-// w-full delay-300
 
 export default Header;

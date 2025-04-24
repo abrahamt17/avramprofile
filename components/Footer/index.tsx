@@ -30,27 +30,23 @@ const Footer = () => {
               >
                 <a href="/">
                   <span className="hidden text-4xl font-extrabold text-blue-500 dark:block">
-                    TRIVIUM
+                    ABRAHAM
                   </span>
-                  <span className="hidden text-xl  font-normal dark:block">
+                  {/* <span className="hidden text-xl  font-normal dark:block">
                     STUDIOS™
-                  </span>
+                  </span> */}
                   <div className="flex flex-col">
                     <span className="text-4xl font-extrabold text-blue-500 dark:hidden">
-                      TRIVIUM
+                      ABRAHAM
                     </span>
-                    <span className="text-xl font-normal  dark:hidden">
+                    {/* <span className="text-xl font-normal  dark:hidden">
                       {" "}
                       STUDIOS™
-                    </span>
+                    </span> */}
                   </div>
                 </a>
                 <p className="mb-10 mt-5">
-                  At Trivium, software development is just the beginning. We go
-                  beyond the realms of desktop, web, and mobile app development.
-                  Through our full-service development, design and marketing
-                  solutions, we can help your firm realize its digital goals.
-                  Let’s get coding, designing, and promoting your brand online!
+                I'm a Software Engineer passionate about building intuitive and scalable web applications.
                 </p>
 
                 <p className="mb-1.5 text-sectiontitle uppercase tracking-[5px]">
@@ -60,7 +56,7 @@ const Footer = () => {
                   href="#"
                   className="text-itemtitle font-medium text-black dark:text-white"
                 >
-                  contact@triviumstudiosltd.com
+                  contact@tikuyeabraham@gmail.com
                 </a>
               </motion.div>
 

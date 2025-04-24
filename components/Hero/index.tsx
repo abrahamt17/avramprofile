@@ -16,24 +16,14 @@ const Hero = () => {
           <div className="flex lg:items-center lg:gap-8 xl:gap-32.5">
             <div className=" md:w-1/2">
               <h4 className="mb-4.5 text-xl font-semibold text-black dark:text-white">
-                <span className="text-4xl">📢</span>{" "}
-                <span className="text-red-700">Attetion Busiess Owners!</span>
+                <span className="text-4xl">🧑‍💻</span>{" "}
+                <span className="text-blue-700">Welcome to My Portfolio</span>
               </h4>
               <h1 className="mb-5 pr-16 text-3xl font-extrabold text-black dark:text-white xl:text-hero ">
-                Empower Your Growth with{" "}
-                <span className="transform font-extrabold text-blue-500 shadow-2xl transition-transform duration-200 ease-in-out hover:scale-110 hover:shadow-lg">
-                  Innovative & Data-Driven
-                </span>{" "}
-                {"   "}
-                <span className="relative inline-block text-3xl font-semibold  ">
-                  Digital Marketing Solutions
-                </span>
+                I'm a Software Engineer passionate about building intuitive and scalable web applications.
               </h1>
               <p className="text-ellipsis text-base font-light text-black dark:text-white xl:text-lg">
-                we create tailored software solutions and comprehensive digital
-                marketing strategies that drive growth and innovation to enhance
-                your digital presence, streamline your operations, and leverage
-                data for better decision-making.
+                Specializing in Front-End technologies like React, Next.js, Tailwind CSS, TypeScript, and Redux, with experience in Python REST APIs and databases.
               </p>
 
               <div className="mt-10">
@@ -52,18 +42,18 @@ const Hero = () => {
                       className="flex rounded-full bg-primary px-7.5 py-2.5 text-white duration-300 ease-in-out hover:bg-blue-600 dark:bg-btndark dark:hover:bg-blackho"
                     >
                       <a
-                        href="https://calendly.com/dawiteliaskassaye/meeting-with-the-trivium-team"
+                        href="mailto:your.email@example.com"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Schedule a Free Consultation
+                        Contact Me
                       </a>
                     </button>
                   </div>
                 </form>
 
                 <p className="mt-5 text-black dark:text-white">
-                  🌟 Schedule a free 25-minute in-person consultation with us
+                  🌟 Feel free to reach out for collaborations or inquiries.
                 </p>
               </div>
             </div>
@@ -71,40 +61,19 @@ const Hero = () => {
             <div className="animate_right hidden md:w-1/2 lg:block">
               <div className="relative 2xl:-mr-7.5">
                 <Image
-                  src="/images/shape/shape-01.png"
-                  alt="shape"
-                  width={46}
-                  height={246}
-                  className="absolute -left-11.5 top-0"
+                  src="/images/personal-hero.jpg"
+                  alt="Personal Hero"
+                  className="transform rounded-xl shadow-2xl transition-transform duration-200 ease-in-out hover:scale-110 hover:shadow-lg  dark:hidden"
+                  width={700}
+                  height={444}
                 />
                 <Image
-                  src="/images/shape/shape-02.svg"
-                  alt="shape"
-                  width={36.9}
-                  height={36.7}
-                  className="absolute bottom-0 right-0 z-10"
+                  src="/images/personal-hero-dark.jpg"
+                  alt="Personal Hero"
+                  className="hidden rounded-xl shadow-2xl transition-transform duration-200 ease-in-out hover:scale-110 hover:shadow-lg dark:block"
+                  width={700}
+                  height={444}
                 />
-                <Image
-                  src="/images/shape/shape-03.svg"
-                  alt="shape"
-                  width={21.64}
-                  height={21.66}
-                  className="absolute -right-6.5 bottom-0 z-1"
-                />
-                <div className=" relative aspect-[700/444] w-full rounded-xl">
-                  <Image
-                    className="transform rounded-xl shadow-2xl transition-transform duration-200 ease-in-out hover:scale-110 hover:shadow-lg  dark:hidden"
-                    src="/images/hero/hero2.jpg"
-                    alt="Hero"
-                    fill
-                  />
-                  <Image
-                    className="hidden rounded-xl shadow-2xl transition-transform duration-200 ease-in-out hover:scale-110 hover:shadow-lg dark:block"
-                    src="/images/hero/hero2.jpg"
-                    alt="Hero"
-                    fill
-                  />
-                </div>
               </div>
             </div>
           </div>

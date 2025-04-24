@@ -3,7 +3,7 @@ export default function Head() {
     <>
       <title>
         {" "}
-        TRIVIUM STUDIOS™ | Digital Marketing | Software Development | Content
+         STUDIOTRIVIUMS™ | Digital Marketing | Software Development | Content
         Production and Advertising
       </title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
