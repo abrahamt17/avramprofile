@@ -33,8 +33,8 @@ const Brands = () => {
       <section className="border border-x-0 border-y-stroke bg-alabaster py-11 dark:border-y-strokedark dark:bg-black">
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           <div className="text-center text-black dark:text-white">
-            <h2 className="text-3xl font-bold mb-4">My Projects & Collaborations</h2>
-            <p className="mb-8">
+            <h2 className="text-4xl font-bold mb-8 ">My Projects & Collaborations</h2>
+            <p className="mb-4 text-lg font-normal text-gray-600 dark:text-gray-400">
               Here are some of the projects and collaborations I have been part of.
             </p>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -44,8 +44,8 @@ const Brands = () => {
                   className="rounded-lg bg-gray-200 dark:bg-gray-800 p-6 shadow-md flex flex-col justify-between"
                 >
                   <div>
-                    <h3 className="mb-2 text-xl font-semibold">{project.title}</h3>
-                    <p className="mb-4 text-sm">{project.description}</p>
+                    <h3 className="mb-4 text-xl font-bold">{project.title}</h3>
+                    <p className="mb-1 text-sm dark:text-gray-400 normal">{project.description}</p>
                     <div className="flex flex-wrap gap-2">
                       {project.techStack.map((tech, idx) => (
                         <span
