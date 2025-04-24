@@ -4,25 +4,25 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    name: "Yodahe",
+    name: "Jane Doe",
     role: "Project Manager",
     feedback:
       "Working with [Your Name] was a fantastic experience. Their technical skills and dedication helped us deliver the project on time.",
-    image: "/assets/Screenshot From 2025-04-24 16-46-44.png",
+    image: "/images/testimonial/avram.jpg",
   },
   {
     name: "John Smith",
     role: "Team Lead",
     feedback:
       "[Your Name] consistently demonstrated excellent problem-solving skills and a strong work ethic.",
-    image: "/assets/Screenshot From 2025-04-24 16-46-44.png",
+    image: "/images/testimonial/testimonial1.png",
   },
   {
     name: "Emily Johnson",
     role: "Client",
     feedback:
       "The application developed exceeded our expectations. Highly recommend [Your Name] for any software development needs.",
-    image: "/assets/Screenshot From 2025-04-24 16-46-44.png",
+    image: "/images/testimonial/avram.jpg",
   },
 ];
 

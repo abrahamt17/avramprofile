@@ -447,7 +447,7 @@ const Footer = () => {
               className="animate_top"
             >
               <p>
-                &copy; {new Date().getFullYear()-1} TRIVIUM STUDIOS™, Ltd. All
+                &copy; {new Date().getFullYear()-1}  All
                 rights reserved
               </p>
             </motion.div>
