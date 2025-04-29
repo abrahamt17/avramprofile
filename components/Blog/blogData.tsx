@@ -1,47 +1,24 @@
-import { Blog } from "@/types/blog";
-
-const BlogData: Blog[] = [
+const BlogData = [
   {
     _id: 1,
-    mainImage: "/images/blog/blog-01.png",
-    title: "Free advertising for your online business",
+    mainImage: "/images/blog/project-redesign.png",
+    title: "National ID Help Page Redesign",
     metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
+      "A detailed case study on redesigning the National ID help page to improve user experience and accessibility using React and Tailwind CSS.",
   },
   {
     _id: 2,
-    mainImage: "/images/blog/blog-02.png",
-    title: "9 simple ways to improve your design skills",
+    mainImage: "/images/blog/grievance-management.png",
+    title: "Grievance Management System Development",
     metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
+      "Insights into building a dynamic grievance management system with advanced search, pagination, and REST API integration.",
   },
   {
-    _id: 2,
-    mainImage: "/images/blog/blog-03.png",
-    title: "Tips to quickly improve your coding speed.",
+    _id: 3,
+    mainImage: "/images/blog/song-manager.png",
+    title: "Song Manager App with Redux and REST API",
     metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
-  },
-  {
-    _id: 1,
-    mainImage: "/images/blog/blog-03.png",
-    title: "Free advertising for your online business",
-    metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
-  },
-  {
-    _id: 2,
-    mainImage: "/images/blog/blog-04.png",
-    title: "9 simple ways to improve your design skills",
-    metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
-  },
-  {
-    _id: 2,
-    mainImage: "/images/blog/blog-01.png",
-    title: "Tips to quickly improve your coding speed.",
-    metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
+      "An overview of developing a song manager app featuring add, edit, delete functionalities and responsive design.",
   },
 ];
 

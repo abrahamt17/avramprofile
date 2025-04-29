@@ -6,7 +6,7 @@ import DevelopersSection from '@/components/Developers/developers';
 const DevelopersPage: NextPage = () => {
   return (
     <div>
-      <DevelopersSection />
+      {/* <DevelopersSection /> */}
     </div>
   );
 };

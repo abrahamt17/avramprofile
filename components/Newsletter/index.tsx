@@ -28,9 +28,9 @@ const NewsletterCTA = () => {
               viewport={{ once: true }}
               className="animate_left md:w-[70%] lg:w-1/2"
             >
-              <h2 className="mb-4 w-11/12 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle4">
-                Get weekly Market insghts and Premium Case studies straight to your inbox for free!
-              </h2>
+                <h2 className="mb-4 w-11/12 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle4">
+                Stay updated with my latest projects and insights directly in your inbox!
+                </h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
                 convallis tortor eros. Donec vitae tortor lacus. Phasellus
@@ -67,7 +67,7 @@ const NewsletterCTA = () => {
                   href="signup.html"
                   className="inline-flex items-center gap-2.5 rounded-full bg-primary px-6 py-3 font-medium text-white hover:opacity-90 dark:bg-white dark:text-black"
                 >
-                  Subscribe to The Trivium
+                  Subscribe to my Blog
                   {/* <Image
                     width={20}
                     height={20}

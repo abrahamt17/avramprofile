@@ -133,104 +133,101 @@ const About = () => {
       {/* <!-- ===== About End ===== --> */}
 
       {/* <!-- ===== Projects Start ===== --> */}
-      <section>
-        <div className="mx-auto max-w-c-1235 overflow-hidden px-4 md:px-8 2xl:px-0">
-          <div className="flex items-center gap-8 lg:gap-32.5">
-            <motion.div
-              variants={{
-                hidden: {
-                  opacity: 0,
-                  x: -20,
-                },
-
-                visible: {
-                  opacity: 1,
-                  x: 0,
-                },
-              }}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 1, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="animate_left md:w-1/2"
-            >
-              <h4 className="font-medium uppercase text-black dark:text-white">
-                🚀 Projects
-              </h4>
-              <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">
-                Here are some of the projects I've developed or contributed to:
-              </h2>
-              <p>
-                1. National ID Help Page Redesign
-                <br />
-                Features:
-                <ul className="list-disc list-inside">
-                  <li>Redesigned the official help page using React and Tailwind CSS.</li>
-                  <li>Implemented responsive design and user-friendly forms.</li>
-                  <li>Overcame challenges with legacy codebase (i8).</li>
-                  <li>Developed a custom Next.js server for testing purposes.</li>
-                </ul>
-                Tech Stack: React, Next.js, Tailwind CSS, i8.
-              </p>
-              <p>
-                2. Grievance Management System (GMS) Portal
-                <br />
-                Features:
-                <ul className="list-disc list-inside">
-                  <li>Built a dynamic GRM table with pagination, sorting, and updates.</li>
-                  <li>Managed state and integrated REST API for backend communication.</li>
-                  <li>Created a mini-dashboard for data insights.</li>
-                  <li>Implemented advanced search options and a responsive user panel.</li>
-                </ul>
-                Tech Stack: React, TypeScript, Spring Boot, PostgreSQL, REST API.
-              </p>
-              <p>
-                3. Song Manager App
-                <br />
-                Features:
-                <ul className="list-disc list-inside">
-                  <li>Fetched song data from JSONPlaceholder REST API.</li>
-                  <li>Added functionalities to add, edit, and delete records.</li>
-                  <li>Implemented show more/less feature for list items.</li>
-                  <li>Ensured responsive design for various devices.</li>
-                </ul>
-                Tech Stack: React, Tailwind CSS, Redux, Emotion, Redux-Saga, REST API.
-              </p>
-            </motion.div>
-            <motion.div
-              variants={{
-                hidden: {
-                  opacity: 0,
-                  x: 20,
-                },
-
-                visible: {
-                  opacity: 1,
-                  x: 0,
-                },
-              }}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 1, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="animate_right relative mx-auto hidden aspect-[588/526.5] md:block md:w-1/2"
-            >
-              <Image
-                src="/images/projects-image.jpg"
-                alt="Projects"
-                className="rounded-xl shadow-2xl transition-transform duration-200 ease-in-out hover:scale-110 hover:shadow-lg dark:hidden"
-                fill
-              />
-              <Image
-                src="/images/projects-image-dark.jpg"
-                alt="Projects"
-                className="hidden rounded-xl shadow-2xl transition-transform duration-200 ease-in-out hover:scale-110 hover:shadow-lg dark:block"
-                fill
-              />
-            </motion.div>
+      {/* <section className="mt-20 overflow-hidden pb-20 lg:pb-25 xl:pb-30 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl shadow-lg">
+        <div className="mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0">
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-32.5">
+        <motion.div
+          variants={{
+            hidden: {
+          opacity: 0,
+          x: -20,
+            },
+            visible: {
+          opacity: 1,
+          x: 0,
+            },
+          }}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 1, delay: 0.1 }}
+          viewport={{ once: true }}
+          className="animate_left lg:w-1/2"
+        >
+          <h4 className="font-medium uppercase tracking-wider text-yellow-300">
+            🚀 Featured Projects
+          </h4>
+          <h2 className="relative mb-6 text-4xl font-extrabold leading-tight">
+            A Showcase of My Work
+          </h2>
+          <div className="space-y-8">
+            <div className="p-6 bg-white text-black rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+          <h3 className="text-2xl font-bold mb-2">National ID Help Page Redesign</h3>
+          <p className="text-sm mb-4">
+            Redesigned the official help page with a focus on responsive design and user-friendly forms.
+          </p>
+          <ul className="list-disc list-inside text-sm">
+            <li>React, Next.js, Tailwind CSS</li>
+            <li>Custom Next.js server for testing</li>
+            <li>Legacy codebase integration</li>
+          </ul>
+            </div>
+            <div className="p-6 bg-white text-black rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+          <h3 className="text-2xl font-bold mb-2">Grievance Management System (GMS) Portal</h3>
+          <p className="text-sm mb-4">
+            Built a dynamic GRM table with advanced features and backend integration.
+          </p>
+          <ul className="list-disc list-inside text-sm">
+            <li>React, TypeScript, Spring Boot</li>
+            <li>REST API, PostgreSQL</li>
+            <li>Mini-dashboard for insights</li>
+          </ul>
+            </div>
+            <div className="p-6 bg-white text-black rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+          <h3 className="text-2xl font-bold mb-2">Song Manager App</h3>
+          <p className="text-sm mb-4">
+            A responsive app for managing songs with CRUD functionalities.
+          </p>
+          <ul className="list-disc list-inside text-sm">
+            <li>React, Tailwind CSS, Redux</li>
+            <li>Emotion, Redux-Saga</li>
+            <li>JSONPlaceholder REST API</li>
+          </ul>
+            </div>
+          </div>
+        </motion.div>
+        <motion.div
+          variants={{
+            hidden: {
+          opacity: 0,
+          x: 20,
+            },
+            visible: {
+          opacity: 1,
+          x: 0,
+            },
+          }}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 1, delay: 0.1 }}
+          viewport={{ once: true }}
+          className="animate_right relative mx-auto hidden aspect-[588/526.5] md:block md:w-1/2"
+        >
+          <Image
+            src="/images/projects-image.jpg"
+            alt="Projects"
+            className="rounded-xl shadow-2xl transition-transform duration-200 ease-in-out hover:scale-110 hover:shadow-lg dark:hidden"
+            fill
+          />
+          <Image
+            src="/images/projects-image-dark.jpg"
+            alt="Projects"
+            className="hidden rounded-xl shadow-2xl transition-transform duration-200 ease-in-out hover:scale-110 hover:shadow-lg dark:block"
+            fill
+          />
+        </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* <!-- ===== Projects End ===== --> */}
 
       {/* <!-- ===== Skills Start ===== --> */}

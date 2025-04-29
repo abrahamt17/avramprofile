@@ -25,12 +25,7 @@ const menuData: Menu[] = [
         newTab: false,
         path: "/Solutions/#Education",
       },
-      {
-        id: 31,
-        title: "Governement Services Solutions",
-        newTab: false,
-        path: "/Solutions/#GovernmentSolutions",
-      },
+      
       {
         id: 34,
         title: "Education and Consultancy",
@@ -43,30 +38,8 @@ const menuData: Menu[] = [
         newTab: false,
         path: "/Solutions/#E-commerce",
       },
-      {
-        id: 35,
-        title: "Manufacturing",
-        newTab: false,
-        path: "/Solutions/#manufacturing",
-      },
-      {
-        id: 35,
-        title: "Media & Entertainment",
-        newTab: false,
-        path: "/Solutions/#media&entertainment",
-      },
-      {
-        id: 35.1,
-        title: "Healthcare Services",
-        newTab: false,
-        path: "/Solutions/#healthcare",
-      },
-      {
-        id: 36,
-        title: "Realstate",
-        newTab: false,
-        path: "/Solutions/#realstate",
-      },
+     
+      
     ],
   },
 
@@ -87,18 +60,7 @@ const menuData: Menu[] = [
         newTab: false,
         path: "/Portfolio/#mobileapps",
       },
-      {
-        id: 35,
-        title: "Enterprise Software Solutions",
-        newTab: false,
-        path: "/Portfolio/#erp",
-      },
-      {
-        id: 35,
-        title: "Digital Marketing",
-        newTab: false,
-        path: "/Portfolio/#digitalmarketing",
-      },
+      
       {
         id: 35.1,
         title: "Content Production ",
@@ -130,39 +92,23 @@ const menuData: Menu[] = [
         newTab: false,
         path: "/Resources/blog",
       },
-      {
-        id: 34,
-        title: "Case Studies & Annual Reports",
-        newTab: false,
-        path: "/Resources/case-studies",
-      },
-      {
-        id: 35,
-        title: "Free E-books & Guides",
-        newTab: false,
-        path: "/Resources/free-guides",
-      },
-      {
-        id: 35,
-        title: "Career At Trivium",
-        newTab: false,
-        path: "/Career",
-      },
+     
     ],
   },
   
   {
     id: 4,
-    title: "Contact Us",
+    title: "Contact ",
     newTab: false,
     path: "/support",
   },
   {
     id: 2,
-    title: "Developers",
+    title: "Testimonials",
     newTab: false,
-    path: "/developers",
+    path: "/Testimonial",
   },
+  
 
 ];
 

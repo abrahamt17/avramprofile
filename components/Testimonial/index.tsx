@@ -4,18 +4,18 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    name: "Jane Doe",
-    role: "Project Manager",
+    name: "Yodahe Zemichael",
+    role: "Project Manager",  
     feedback:
-      "Working with [Your Name] was a fantastic experience. Their technical skills and dedication helped us deliver the project on time.",
-    image: "/images/testimonial/avram.jpg",
+      "Abraham has been a great asset for Fayda. During his internship, he took on bigger responsibilities than were put on his desk and his immediate supervisors appreciated his stay with us.",
+    image: "/images/testimonial/yodahe.jpg",
   },
   {
     name: "John Smith",
-    role: "Team Lead",
+    role: "Software Project Management | Product Management | Digital ID | ",
     feedback:
-      "[Your Name] consistently demonstrated excellent problem-solving skills and a strong work ethic.",
-    image: "/images/testimonial/testimonial1.png",
+      "as an intern at our company, Abraham has demonstrated outstanding skills in web development and a strong commitment to learning and growth. his dedication to mastering new concepts and applying them effiectively highlights his potential to excel as a project manager.",
+    image: "/images/testimonial/selam.jpg",
   },
   {
     name: "Emily Johnson",
