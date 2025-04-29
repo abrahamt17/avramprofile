@@ -25,7 +25,7 @@ const Feature = () => {
                 title: "TRIVIUM PRODUCTS",
                 subtitle:
                   "Get Lifetime Access To Our Flagship Products For Free For Your Business",
-                description: `We believe in providing our clients with the best tools to succeed. That's why we're excited to offer lifetime access to our powerful AI powered marketing  product that we use for internal operations in our team, Optimetrics.ai, and other helpful digital products for free to all our clients who choose to work with us.`,
+                description: `I believe in providing our clients with the best tools to succeed. That's why we're excited to offer lifetime access to our powerful AI powered marketing  product that we use for internal operations in our team, Optimetrics.ai, and other helpful digital products for free to all our clients who choose to work with us.`,
               }}
             />
           </div>

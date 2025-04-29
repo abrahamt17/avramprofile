@@ -11,17 +11,17 @@ const testimonials = [
     image: "/images/testimonial/yodahe.jpg",
   },
   {
-    name: "John Smith",
+    name: "Selamawit Reta",
     role: "Software Project Management | Product Management | Digital ID | ",
     feedback:
       "as an intern at our company, Abraham has demonstrated outstanding skills in web development and a strong commitment to learning and growth. his dedication to mastering new concepts and applying them effiectively highlights his potential to excel as a project manager.",
     image: "/images/testimonial/selam.jpg",
   },
   {
-    name: "Emily Johnson",
+    name: "Abc",
     role: "Client",
     feedback:
-      "The application developed exceeded our expectations. Highly recommend [Your Name] for any software development needs.",
+      "waiting...tiktak.",
     image: "/images/testimonial/avram.jpg",
   },
 ];
