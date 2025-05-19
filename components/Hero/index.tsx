@@ -20,10 +20,10 @@ const Hero = () => {
                 <span className="text-blue-700">Welcome to My Portfolio</span>
               </h4>
               <h1 className="mb-5 pr-16 text-3xl font-extrabold text-black dark:text-white xl:text-hero ">
-                Engineering Management student || Software Engineer passionate about building intuitive and scalable web applications.
+                 Software Engineer passionate about building intuitive and scalable web applications. 
               </h1>
               <p className="text-ellipsis text-base font-light text-black dark:text-white xl:text-lg">
-                Specializing in Front-End technologies like React, Next.js, Tailwind CSS, TypeScript, and Redux, with experience in Python REST APIs and databases.
+                Engineering Management student || Specializing in Front-End technologies like React, Next.js, Tailwind CSS, TypeScript, and Redux, with experience in Python REST APIs and databases.
               </p>
 
               <div className="mt-10">
