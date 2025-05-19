@@ -23,8 +23,7 @@ const PortfolioPage = (props: Props) => {
             </div>
           </h2>
           <p className="mb-7.5">
-            We will notify you when we complet the monthly maintainance period
-            for our website.
+            will notify you when its done
           </p>
 
           <a

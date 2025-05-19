@@ -13,8 +13,8 @@ const Pricing = () => {
             <SectionHeader
               headerInfo={{
                 title: `TRIVIUM DIGITAL MARKETING PROJECTS`,
-                subtitle: `Some Of The Digital Marketing Projects That We Have Provided To Our Clients`,
-                description: `These are some of the Digital Marketing projects that we take pride in by delivering them to our clients with 99% sucess rate.`,
+                subtitle: `Some Of The Digital Marketing Projects That  Have Provided To Our Clients`,
+                description: `These are some of the Digital Marketing projects that I take pride in by delivering them to our clients with 99% sucess rate.`,
               }}
             />
           </div>

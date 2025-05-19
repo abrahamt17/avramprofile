@@ -11,9 +11,9 @@ const Blog = async () => {
         <div className="animate_top mx-auto text-center">
           <SectionHeader
             headerInfo={{
-              title: `CASE STUDIES & BLOGS`,
-              subtitle: `Latest Case Studies & Blogs`,
-              description: `Check out real-life examples of how our custom solutions have helped our clients achieve their specific goals and Explore our blog for in-depth insights on marketing and software, where we discuss complex topics to improve our readers' understanding.`,
+              title: `PROJECTS & ARTICLES`,
+              subtitle: `Latest Projects & Articles`,
+              description: `Explore my portfolio to see real-world projects I've built, showcasing my skills and problem-solving abilities. Dive into my articles for insights on software development, where I share knowledge and experiences to help others grow.`,
             }}
           />
         </div>
@@ -27,10 +27,11 @@ const Blog = async () => {
           ))}
         </div>
         <button
-          aria-label="get started button"
+          type="button"
+          aria-label="view more projects and articles"
           className="ml-[430px] mt-16 flex w-1/3 items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-white duration-300 ease-in-out hover:bg-blue-600 dark:bg-btndark dark:hover:bg-blackho"
         >
-          Read More
+          View More
         </button>
       </div>
     </section>
