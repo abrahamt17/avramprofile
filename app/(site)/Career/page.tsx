@@ -2,35 +2,34 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Career at TRIVIUM - Open Positions at Our Company",
-  description: "Apply For Jobs At The Lead Software development and Digital Marketing Services Provider",
-  // other metadata
+  title: "404 - Page Not Found | My Personal Blog",
+  description: "Lost in the void? This page doesn't exist, but let's guide you back to my blog!",
 };
 
-const ErroPage = () => {
+const ErrorPage = () => {
   return (
     <section className="overflow-hidden pb-25 pt-45 lg:pb-32.5 lg:pt-50 xl:pb-37.5 xl:pt-55">
       <div className="animate_top mx-auto max-w-[518px] text-center">
-        {/* <Image
-          src="/images/shape/404.svg"
-          alt="404"
+        <Image
+          src="/images/shape/blog-404.svg"
+          alt="404 Error"
           className="mx-auto mb-7.5"
           width={400}
           height={400}
-        /> */}
+        />
 
         <h2 className="mb-5 text-2xl font-semibold text-black dark:text-white md:text-4xl">
-          We aren't Hiring Currently.
+          Oops! This Page is Missing.
         </h2>
         <p className="mb-7.5">
-          We will notify you when we have open positions in the future. Leave us a message with your email address.
+          You've wandered into uncharted territory on my blog. Let's get you back to exploring my stories and projects!
         </p>
 
         <a
           href="/"
           className="inline-flex items-center gap-2.5 rounded-full bg-primary px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blue-500 dark:bg-btndark dark:hover:bg-blackho"
         >
-          Return to Home
+          Back to Blog
           <svg
             className="fill-white"
             width="14"
@@ -50,4 +49,4 @@ const ErroPage = () => {
   );
 };
 
-export default ErroPage;
+export default ErrorPage;

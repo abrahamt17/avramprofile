@@ -10,13 +10,13 @@ const About = () => {
       {/* <!-- ===== About Start ===== --> */}
       <section className="overflow-hidden pb-20 lg:pb-25 xl:pb-30">
         <div className="mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0">
-          <SectionHeader
+          {/* <SectionHeader
             headerInfo={{
               title: "🧑‍💻 Developer Profile",
               subtitle: "About Me",
               description: `I'm a dedicated Software Engineer and Junior Project Management student with a passion for crafting intuitive user experiences. Specializing in Front-End technologies like React, Next.js, Tailwind CSS, TypeScript, and Redux, I also have worked with Python REST APIs, MySQL, and PostgreSQL before. My adaptability allows me to quickly learn and implement new technologies to meet diverse business needs.`,
             }}
-          />
+          /> */}
           <div className="mt-19 flex items-center gap-8 lg:gap-32.5">
             <motion.div
               variants={{
@@ -231,7 +231,7 @@ const About = () => {
       {/* <!-- ===== Projects End ===== --> */}
 
       {/* <!-- ===== Skills Start ===== --> */}
-      <section className="mt-20 overflow-hidden pb-20 lg:pb-25 xl:pb-30">
+      {/* <section className="mt-20 overflow-hidden pb-20 lg:pb-25 xl:pb-30">
         <div className="mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0">
           <div className="mt-10 flex items-center gap-8 lg:gap-32.5">
             <motion.div
@@ -301,7 +301,7 @@ const About = () => {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* <!-- ===== Skills End ===== --> */}
 
       {/* <!-- ===== Aspirations Start ===== --> */}
@@ -373,7 +373,7 @@ const About = () => {
       {/* <!-- ===== Aspirations End ===== --> */}
 
       {/* <!-- ===== Hobbies Start ===== --> */}
-      <section className="mt-20 overflow-hidden pb-20 lg:pb-25 xl:pb-30">
+      {/* <section className="mt-20 overflow-hidden pb-20 lg:pb-25 xl:pb-30">
         <div className="mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0">
           <div className="mt-10 flex items-center gap-8 lg:gap-32.5">
             <motion.div
@@ -434,10 +434,12 @@ const About = () => {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* <!-- ===== Hobbies End ===== --> */}
     </>
   );
 };
 
 export default About;
+
+

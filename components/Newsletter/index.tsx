@@ -31,11 +31,9 @@ const NewsletterCTA = () => {
                 <h2 className="mb-4 w-11/12 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle4">
                 Stay updated with my latest projects and insights directly in your inbox!
                 </h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                convallis tortor eros. Donec vitae tortor lacus. Phasellus
-                aliquam ante in maximus.
-              </p>
+                <p>
+                Subscribe to receive exclusive updates, project launches, and insightful articles. No spam—just valuable content delivered straight to your inbox.
+                </p>
             </motion.div>
             <motion.div
               variants={{
@@ -64,7 +62,7 @@ const NewsletterCTA = () => {
                   className="hidden xl:block"
                 />
                 <a
-                  href="signup.html"
+                  href="https://et.linkedin.com/in/abraham-tikuye-31a485283"
                   className="inline-flex items-center gap-2.5 rounded-full bg-primary px-6 py-3 font-medium text-white hover:opacity-90 dark:bg-white dark:text-black"
                 >
                   Subscribe to my Blog

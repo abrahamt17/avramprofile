@@ -61,14 +61,14 @@ const Hero = () => {
             <div className="animate_right hidden md:w-1/2 lg:block">
               <div className="relative 2xl:-mr-7.5">
                 <Image
-                  src="/images/personal-hero.jpg"
+                  src="/images/testimonial/avram.jpg"
                   alt="Personal Hero"
                   className="transform rounded-xl shadow-2xl transition-transform duration-200 ease-in-out hover:scale-110 hover:shadow-lg  dark:hidden"
                   width={700}
                   height={444}
                 />
                 <Image
-                  src="/images/personal-hero-dark.jpg"
+                  src="/images/testimonial/avram.jpg"
                   alt="Personal Hero"
                   className="hidden rounded-xl shadow-2xl transition-transform duration-200 ease-in-out hover:scale-110 hover:shadow-lg dark:block"
                   width={700}

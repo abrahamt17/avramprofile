@@ -18,10 +18,10 @@ const testimonials = [
     image: "/images/testimonial/selam.jpg",
   },
   {
-    name: "Abc",
+    name: "client",
     role: "Client",
     feedback:
-      "waiting...tiktak.",
+      "...",
     image: "/images/testimonial/avram.jpg",
   },
 ];

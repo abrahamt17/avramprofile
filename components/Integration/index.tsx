@@ -30,18 +30,20 @@ const Integration = () => {
               viewport={{ once: true }}
               className="animate_top w-1/6"
             >
+
+              
               <div className="inline-block rounded-[10px] bg-white p-4.5 shadow-solid-7 dark:bg-btndark">
                 <Image
                   width={50}
                   height={50}
-                  src="/images/brand/react.svg"
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
                   alt="React"
                   className="shadow-2xl transition-transform duration-200 ease-in-out hover:scale-110 hover:shadow-lg dark:hidden"
                 />
                 <Image
                   width={50}
                   height={50}
-                  src="/images/brand/react-dark.svg"
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
                   alt="React"
                   className="hidden dark:block"
                 />
@@ -63,14 +65,14 @@ const Integration = () => {
                 <Image
                   width={50}
                   height={50}
-                  src="/images/brand/nextjs.svg"
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg"
                   alt="Next.js"
                   className="shadow-2xl transition-transform duration-200 ease-in-out hover:scale-110 hover:shadow-lg dark:hidden"
                 />
                 <Image
                   width={50}
                   height={50}
-                  src="/images/brand/nextjs-dark.svg"
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg"
                   alt="Next.js"
                   className="hidden dark:block"
                 />
@@ -79,8 +81,8 @@ const Integration = () => {
 
             <motion.div
               variants={{
-                hidden: { opacity: 0, y: -20 },
-                visible: { opacity: 1, y: 0 },
+              hidden: { opacity: 0, y: -20 },
+              visible: { opacity: 1, y: 0 },
               }}
               initial="hidden"
               whileInView="visible"
@@ -89,20 +91,21 @@ const Integration = () => {
               className="animate_top w-1/6"
             >
               <div className="inline-block rounded-[10px] bg-white p-4.5 shadow-solid-7 dark:bg-btndark">
-                <Image
-                  width={50}
-                  height={50}
-                  src="/images/brand/tailwind.svg"
-                  alt="Tailwind CSS"
-                  className="shadow-2xl transition-transform duration-200 ease-in-out hover:scale-110 hover:shadow-lg dark:hidden"
-                />
-                <Image
-                  width={50}
-                  height={50}
-                  src="/images/brand/tailwind-dark.svg"
-                  alt="Tailwind CSS"
-                  className="hidden dark:block"
-                />
+              <Image
+                width={50}
+                height={50}
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                alt="Tailwind CSS"
+                className="shadow-2xl transition-transform duration-200 ease-in-out hover:scale-110 hover:shadow-lg dark:hidden"
+              />
+              <Image
+                width={50}
+                height={50}
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                alt="Tailwind CSS"
+                style={{ filter: "invert(1) hue-rotate(180deg)" }}
+                className="hidden dark:block"
+              />
               </div>
             </motion.div>
 
@@ -121,14 +124,14 @@ const Integration = () => {
                 <Image
                   width={50}
                   height={50}
-                  src="/images/brand/python.svg"
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
                   alt="Python"
                   className="shadow-2xl transition-transform duration-200 ease-in-out hover:scale-110 hover:shadow-lg dark:hidden"
                 />
                 <Image
                   width={50}
                   height={50}
-                  src="/images/brand/python-dark.svg"
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
                   alt="Python"
                   className="hidden dark:block"
                 />
@@ -150,19 +153,20 @@ const Integration = () => {
                 <Image
                   width={50}
                   height={50}
-                  src="/images/brand/typescript.svg"
-                  alt="typescript"
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
+                  alt="TypeScript"
                   className="shadow-2xl transition-transform duration-200 ease-in-out hover:scale-110 hover:shadow-lg dark:hidden"
                 />
                 <Image
                   width={50}
                   height={50}
-                  src="/images/brand/typescript-dark.svg"
-                  alt="Type script"
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
+                  alt="TypeScript"
                   className="hidden dark:block"
                 />
               </div>
             </motion.div>
+            
           </div>
         </div>
       </section>
