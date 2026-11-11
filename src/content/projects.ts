@@ -12,7 +12,7 @@ export const projects: Project[] = [
     tagline: "Risk intelligence for organisations that run autonomous AI agents.",
     angle: {
       "ai-tech":
-        "A multi-tenant SaaS foundation in Next.js and Supabase, with Row Level Security tested against real Postgres.",
+        "The secure foundation of a product many companies can share, with access rules enforced and tested at the database level.",
       product:
         "A product specification and phased roadmap for a new kind of risk, with Phase 1 built and the rest honestly marked as planned.",
       marketing:
@@ -116,30 +116,31 @@ export const projects: Project[] = [
   {
     id: "aeromind",
     name: "AeroMind",
-    role: "Co-founder, product and prototype development",
-    tagline: "An aviation psychology platform that links professional assessment to ongoing development.",
+    role: "Co-founder, product and technical lead",
+    tagline: "An aviation psychology platform that turns a professional's assessment into a student pilot's development plan.",
     angle: {
       "ai-tech":
-        "A working prototype with two role-based portals, an AI tutor grounded in lesson material, and AI-drafted development plans with strict limits.",
+        "A working MVP I built alone: two portals, a learning academy, and an AI tutor with strict limits on what it may say.",
       product:
-        "One hypothesis, assessment-to-development, turned into a complete two-sided journey and a deliberately narrow MVP.",
+        "I led a team of three from idea to pitch: product plan, a deliberately narrow MVP, and a business case with pricing and a financial plan.",
       marketing:
-        "Positioning a specialised product for trainee pilots and psychologists without claiming to be first, unique or clinical.",
+        "A pitch that explains a specialised product to students, schools and psychologists without claiming to be first, unique or clinical.",
     },
     status: "prototype",
     statusNote: "Working prototype, not deployed",
     featured: true,
     categories: ["ai-tech", "product", "project-engineering", "technical-marketing"],
     problem:
-      "For an aspiring pilot, a psychological assessment is often a single event: you are assessed, you get a result, and the process ends. What the trainee should work on afterwards, and how, is left open. AeroMind tests whether connecting the professional's assessment to a continuing development plan is more useful.",
-    users: ["Aspiring and student pilots", "Aviation psychology professionals"],
+      "Becoming a pilot is an expensive bet, and psychological assessment decides who gets through. A student is tested when they enter flight school and again before an airline lets them fly. In the 18 to 24 months between, stress, workload and decision-making all get harder, and most students prepare alone, with no structured professional feedback. AeroMind fills that middle: a qualified psychologist reviews the student, and the approved recommendations become a learning plan.",
+    users: ["Aspiring and student pilots in Europe", "Aviation psychology professionals"],
     approach:
-      "Build the whole journey end to end for two roles before adding anything else: discover a professional, request an assessment, receive a report, follow a development plan. Keep the professional responsible for every judgment, and use AI only for education and for drafting plans.",
+      "Three connected parts: a marketplace where students find a professional, an academy with courses on stress, decisions and fatigue, and an AI learning companion. I built the whole journey end to end for two roles before adding anything else, kept the professional responsible for every judgment, and used AI only for teaching and for drafting plans from approved recommendations. In parallel the team built the business case: who pays, how much, and what has to be true for it to work.",
     personalContribution: [
-      "Built the prototype codebase; I am the sole commit author on the repository.",
-      "Designed the trainee and psychologist journeys and the data model behind them.",
-      "Implemented the AI tutor and development-plan generation behind a single provider interface, with a labelled non-AI fallback.",
-      "Wrote the product guardrails: what the product must never claim, and which features are out of scope for the MVP.",
+      "Built the entire MVP myself, from the first screen to the AI tutor.",
+      "Led a team of three: set the plan, split the work, and kept product, business case and pitch moving together.",
+      "Wrote the product plan: the user journeys for both roles, what is in the MVP and what is deliberately left out.",
+      "Worked on the business plan with the team: pricing, market sizing, a three-year financial plan and a six-week validation plan.",
+      "Set the product's guardrails: what it must never claim, and where a qualified professional must decide.",
     ],
     implementedFeatures: [
       "Trainee portal: onboarding, profile, dashboard, assessments, reports, development plan and scenarios",
@@ -153,9 +154,10 @@ export const projects: Project[] = [
     ],
     plannedFeatures: [
       "Public deployment",
+      "Paid plan and payments",
+      "Flight school distribution and licences",
       "PDF report upload",
-      "Workflows for flight schools and airlines",
-      "Payments",
+      "A first school cohort on the live product",
     ],
     technologies: [
       "Next.js",
@@ -189,11 +191,13 @@ export const projects: Project[] = [
     outcomes: [
       "The MVP journey works end to end for both roles and is covered by automated tests, including database permissions.",
       "The AI tutor and development plans have been tested with real model responses.",
-      "Not deployed. No real users, and no real psychological data: everything shown is sample data.",
+      "Entered in the SIC competition as a three-person team, with a pitch deck and a working product to show.",
+      "Not deployed. No real users, no revenue, and no real psychological data: everything shown is sample data, and the business figures are estimates.",
     ],
     learnings: [
       "In a sensitive domain, most of the product work is deciding what the software must refuse to do.",
-      "Next: validate the assessment-to-development hypothesis with real trainees and professionals before building more.",
+      "A working product changes the conversation: people react to what they can click, not to a slide.",
+      "Next: turn assumptions into evidence with student, flight school and psychologist interviews before building more.",
     ],
     flow: {
       caption: "The trainee journey. Every step shown is built in the prototype.",
@@ -206,6 +210,18 @@ export const projects: Project[] = [
         { label: "Practise", note: "lessons, scenarios", built: true },
       ],
     },
+    plan: {
+      note: "From the team's pitch deck, November 2026. These are estimates and targets, not results. Nothing here has been earned or validated yet.",
+      items: [
+        { value: "€99", label: "Planned price per student, per year" },
+        { value: "20%", label: "Planned commission on each professional review" },
+        { value: "960", label: "Paying students needed to break even" },
+        { value: "Year 2", label: "Planned break-even in the base case" },
+        { value: "€4.5M", label: "Our estimate of yearly European spend on assessment preparation" },
+        { value: "€27k", label: "Funding asked for the first year" },
+      ],
+      next: "Next six weeks: test the assumptions with 30 students, 15 flight schools and 5 aviation psychologists, then run one school cohort on the live prototype.",
+    },
     boundaries: [
       "AeroMind does not diagnose mental-health conditions.",
       "It does not issue fitness certificates and has no aviation medical or regulatory approval.",
@@ -214,7 +230,7 @@ export const projects: Project[] = [
     ],
     links: [{ label: "Repository", url: "https://github.com/abrahamt17/Aeromind" }],
     evidenceStatus: "verified",
-    source: "Public repository README, project notes, source code and commit history, reviewed November 2026.",
+    source: "Public repository (README, project notes, source code, commit history) and the team's pitch deck, both November 2026.",
   },
   {
     id: "creatorpay",
@@ -223,7 +239,7 @@ export const projects: Project[] = [
     tagline: "A payroll and campaign platform prototype for influencer marketing.",
     angle: {
       "ai-tech":
-        "A React and Supabase application covering campaigns, creator payroll, escrow and batch payouts, with a documented schema.",
+        "A working application covering campaigns, creator payroll, escrow and batch payouts, with a documented data model.",
       product:
         "Business software built around one operational question: how do you pay creators fairly for measured performance?",
       marketing:
@@ -303,7 +319,7 @@ export const projects: Project[] = [
     role: "Frontend developer",
     tagline: "A public, sanitised version of the portal I worked on at Fayda.",
     angle: {
-      "ai-tech": "An operations interface in React and TypeScript: queue table, search, pagination and case detail.",
+      "ai-tech": "An operations interface for case handlers: queue table, search, pagination and case detail.",
       product: "An interface designed around how operations staff find and resolve a case.",
       marketing: "A careful public showcase of internal work, using mock data only.",
     },
@@ -367,7 +383,7 @@ export const projects: Project[] = [
     role: "Developer",
     tagline: "A small React and Redux app for managing a list of songs over a REST API.",
     angle: {
-      "ai-tech": "Redux Toolkit state with Redux-Saga side effects for fetching, adding, editing and deleting.",
+      "ai-tech": "State management and API calls for fetching, adding, editing and deleting.",
       product: "A compact exercise in the complete create, read, update and delete loop.",
       marketing: "A simple app with a clear README.",
     },

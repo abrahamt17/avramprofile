@@ -8,9 +8,9 @@ import type { SkillGroup } from "./types.ts";
 export const skillGroups: SkillGroup[] = [
   {
     id: "technical",
-    title: "Technical foundations",
+    title: "Tools I build with",
     lens: "ai-tech",
-    intro: "What I write software with.",
+    intro: "The languages and tools behind the work above.",
     skills: [
       { name: "TypeScript & JavaScript", evidence: "Professional experience", where: ["fayda", "agentcover", "aeromind"] },
       { name: "React", evidence: "Professional experience", where: ["fayda", "agentcover", "aeromind", "creatorpay"] },

@@ -75,6 +75,8 @@ export type Project = {
   learnings: string[];
   /** A diagram of the product journey. Not a screenshot. */
   flow?: { caption: string; steps: FlowStep[] };
+  /** Business plan figures. Always estimates or targets, never results. */
+  plan?: { note: string; items: { value: string; label: string }[]; next?: string };
   /** Safety or legal boundaries the product keeps. */
   boundaries?: string[];
   links: { label: string; url: string }[];

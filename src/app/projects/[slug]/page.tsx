@@ -118,6 +118,23 @@ export default async function CaseStudyPage({ params }: Params) {
             <List items={project.personalContribution} kind="full" />
           </Block>
 
+          {project.plan && (
+            <Block label="Business plan — estimates">
+              <dl className="grid grid-cols-2 gap-x-8 gap-y-8 sm:grid-cols-3">
+                {project.plan.items.map((item) => (
+                  <div key={item.label} className="flex flex-col-reverse justify-end gap-2">
+                    <dt className="text-sm leading-snug text-muted">{item.label}</dt>
+                    <dd className="mega text-5xl md:text-6xl">{item.value}</dd>
+                  </div>
+                ))}
+              </dl>
+              {project.plan.next && <p className="mt-8 leading-relaxed">{project.plan.next}</p>}
+              <p className="mt-4 rounded-xl border border-line bg-surface p-4 text-sm leading-relaxed text-muted">
+                {project.plan.note}
+              </p>
+            </Block>
+          )}
+
           <Block label="Built vs planned">
             <div className="grid gap-10 sm:grid-cols-2">
               <div>
@@ -131,10 +148,6 @@ export default async function CaseStudyPage({ params }: Params) {
                 </div>
               )}
             </div>
-          </Block>
-
-          <Block label="Stack">
-            <Chips items={project.technologies} />
           </Block>
 
           {project.decisions.length > 0 && (
@@ -183,6 +196,10 @@ export default async function CaseStudyPage({ params }: Params) {
                 </li>
               ))}
             </ul>
+          </Block>
+
+          <Block label="Under the hood">
+            <Chips items={project.technologies} />
           </Block>
 
           <Block label="Sources">

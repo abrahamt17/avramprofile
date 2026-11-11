@@ -44,9 +44,9 @@ export function useLens(): Lens {
     subscribe,
     () => {
       const value = document.documentElement.dataset.lens as Lens | undefined;
-      return value && LENSES.includes(value) ? value : "ai-tech";
+      return value && LENSES.includes(value) ? value : "product";
     },
-    () => "ai-tech",
+    () => "product",
   );
 }
 

@@ -53,10 +53,10 @@ export const experience: Experience[] = [
   {
     id: "sic",
     organization: "SIC competition",
-    title: "Contender · technical product lead",
+    title: "Contender · product and technical lead",
     evidenceStatus: "user-confirmation-needed",
     summary:
-      "Competed with a team entry where I led the technical side: I built the product, managed my teammates, and worked on the business plan.",
+      "Entered AeroMind as a team of three. I led the product and the technical work: I built the whole MVP, coordinated my two teammates, and wrote the product plan and the business case.",
     bullets: [],
     technologies: [],
   },

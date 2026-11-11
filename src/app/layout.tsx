@@ -49,7 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      data-lens="ai-tech"
+      data-lens="product"
       data-theme="light"
       suppressHydrationWarning
       className={`${geist.variable} ${geistMono.variable} ${instrument.variable} ${anton.variable}`}

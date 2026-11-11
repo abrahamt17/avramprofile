@@ -31,9 +31,9 @@ export const headline: { lens: Lens; text: string }[] = [
 
 /** The hero's three words. Each one is a lens. */
 export const verbs: { lens: Lens; word: string; line: string }[] = [
-  { lens: "ai-tech", word: "Build", line: "I build with technology." },
-  { lens: "product", word: "Plan", line: "I think in products." },
-  { lens: "marketing", word: "Explain", line: "I turn complex ideas into useful solutions." },
+  { lens: "ai-tech", word: "Build", line: "I turn ideas into working products." },
+  { lens: "product", word: "Plan", line: "I plan the product and lead the delivery." },
+  { lens: "marketing", word: "Explain", line: "I make complex technology easy to understand." },
 ];
 
 /**
@@ -43,17 +43,17 @@ export const verbs: { lens: Lens; word: string; line: string }[] = [
 export const stats: { value: string; unit?: string; label: string; source: string }[] = [
   { value: "1", unit: "yr", label: "Full-time at Ethiopia's national ID programme", source: "Software Developer, Fayda" },
   { value: "2", label: "Products founded and built", source: "AgentCover, AeroMind" },
-  { value: "31", label: "Public repositories on GitHub", source: "github.com/abrahamt17, Nov 2026" },
+  { value: "3", label: "Person team led from idea to pitch", source: "AeroMind, Nov 2026" },
   { value: "3", label: "Countries studied and worked in", source: "Ethiopia, Italy, Romania" },
 ];
 
 export const intro: LensText = {
   "ai-tech":
-    "Software and AI-focused builder with a Computer Science background. I work mostly in TypeScript, React and Next.js, connect language models to real workflows, and test what I ship.",
+    "I build AI and software products end to end. I design how the product should work, build the first version myself, put AI where it actually helps, and test what I ship.",
   product:
-    "A builder studying Engineering Management. I start from the user's problem, write down what is in and out of scope, and keep a clear line between what is built and what is only planned.",
+    "I take a product from a problem to a working MVP. I frame the problem, write the plan, decide what is in and out of scope, coordinate the team, and build the hard parts myself.",
   marketing:
-    "A technical person who likes explaining things. I can read the code behind a product, so I can say plainly what it does, who it is for, and what it does not do yet.",
+    "I understand products at the engineering level, so I can explain them plainly: what the product does, who it is for, why it matters, and what it does not do yet.",
 };
 
 export const story: { year: string; title: string; body: string }[] = [

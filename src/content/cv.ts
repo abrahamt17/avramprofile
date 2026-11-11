@@ -70,7 +70,7 @@ export const cvVariants: CvVariant[] = [
     fileName: "Abraham_Tikuye_AI_Technology.pdf",
     headline: "Software & AI Developer",
     summary:
-      "Software and AI-focused developer with a Computer Science background and current Engineering Management studies. Builds web products in TypeScript, React and Next.js, integrates language models into real workflows, and tests what he ships.",
+      "Builder of AI and software products with a Computer Science background and current Engineering Management studies. Takes a product from problem to working MVP: designs how it works, builds it, integrates language models into real workflows, and tests what he ships.",
     suits: ["Software or frontend developer", "AI engineer or developer", "Automation developer", "Technical analyst"],
     sections: [
       { title: "Experience", entries: experienceEntries(fayda.bullets.slice(0, 3)) },
@@ -78,7 +78,7 @@ export const cvVariants: CvVariant[] = [
         title: "Projects",
         entries: [
           projectEntry("aeromind", "ai-tech", [
-            "Built the full prototype in Next.js and TypeScript with separate trainee and psychologist portals.",
+            "Built the entire MVP alone, with separate trainee and psychologist portals, and led a team of three to pitch.",
             "Implemented an AI tutor that answers from lesson material using embeddings and retrieval, with rules that stop it diagnosing or judging fitness to fly.",
             "Put all model calls behind one provider interface, with a labelled fallback when no AI provider is configured.",
           ]),
@@ -108,7 +108,7 @@ export const cvVariants: CvVariant[] = [
     fileName: "Abraham_Tikuye_Product_Engineering_Management.pdf",
     headline: "Product & Technical Project Profile",
     summary:
-      "Engineering Management student with a software and AI background. Frames problems from the user's side, writes clear specifications and phased roadmaps, and can build the first version himself. Looking for associate product, product analyst or technical project coordination roles.",
+      "Engineering Management student with a software and AI background. Takes a product from problem to working MVP: frames the problem, writes the plan, coordinates the team and builds the first version himself. Looking for product, project and AI solution development roles.",
     suits: ["Associate product manager", "Product or business analyst", "Technical project coordinator", "PMO analyst"],
     sections: [
       {
@@ -121,10 +121,10 @@ export const cvVariants: CvVariant[] = [
             "Kept planned modules visibly separate from built ones in the product and its documentation.",
           ]),
           projectEntry("aeromind", "product", [
-            "Co-founded the project around one hypothesis: linking professional assessment to ongoing development.",
-            "Mapped the journey for two user roles and delivered it end to end as a working prototype.",
-            "Cut the MVP to trainees and psychologists; flight schools, airlines and payments are deliberately out of scope.",
-            "Wrote product guardrails for a sensitive domain, including what the product must never claim.",
+            "Led a team of three from idea to pitch as a contender in the SIC competition.",
+            "Built the entire MVP: the full journey for two user roles, a learning academy and an AI tutor.",
+            "Wrote the product plan and cut the MVP to two user groups; schools, airlines and payments are deliberately later.",
+            "Built the business case with the team: pricing, market sizing, a three-year financial plan and a six-week validation plan.",
           ]),
         ],
       },

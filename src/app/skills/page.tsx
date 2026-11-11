@@ -20,6 +20,10 @@ function reference(id: string): { label: string; href: string } | null {
   return null;
 }
 
+/** What a product or project lead reads first comes first; tools come last. */
+const order = ["product", "ai", "marketing", "technical"];
+const groups = [...skillGroups].sort((a, b) => order.indexOf(a.id) - order.indexOf(b.id));
+
 export default function SkillsPage() {
   return (
     <>
@@ -50,7 +54,7 @@ export default function SkillsPage() {
       </PageIntro>
 
       <div className="wrap">
-        {skillGroups.map((group, i) => (
+        {groups.map((group, i) => (
           <section
             key={group.id}
             data-lens-dim={group.lens === "all" ? undefined : group.lens}
