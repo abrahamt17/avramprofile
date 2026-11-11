@@ -1,9 +1,35 @@
 "use client";
 
-import { lenses } from "@/content/profile";
+import { lenses, verbs } from "@/content/profile";
 import { setLens, useLens } from "@/lib/prefs";
 
-/** The site's one big control: read Abraham as a builder, a planner or an explainer. */
+/** The hero: three giant words. Pressing one changes what the whole site puts first. */
+export function LensWords() {
+  const active = useLens();
+  return (
+    <div role="group" aria-label="Choose what to emphasise">
+      {verbs.map((verb) => {
+        const lens = lenses.find((l) => l.id === verb.lens)!;
+        return (
+          <button
+            key={verb.lens}
+            type="button"
+            data-part={verb.lens}
+            aria-pressed={verb.lens === active}
+            aria-label={`${verb.word}: read the site with ${lens.label} first`}
+            onClick={() => setLens(verb.lens)}
+            className="lens-word text-left"
+          >
+            {verb.word}
+            <span className="stop">.</span>
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
+/** Compact version for inner pages. */
 export function LensSwitch({ compact = false }: { compact?: boolean }) {
   const active = useLens();
 

@@ -63,7 +63,7 @@ export default async function CaseStudyPage({ params }: Params) {
           <span aria-hidden>←</span> All work
         </Link>
         <h1
-          className="display rise mt-8 text-[clamp(3rem,10vw,8rem)]"
+          className="mega rise mt-8 text-[clamp(4rem,15vw,12rem)]"
           style={{ "--i": 1 } as React.CSSProperties}
         >
           {project.name}
@@ -201,7 +201,7 @@ export default async function CaseStudyPage({ params }: Params) {
 
         <Link href={`/projects/${next.id}`} className="row group mt-6 px-1 py-10 md:px-3">
           <p className="label">Next case study</p>
-          <p className="row-title display mt-3 flex items-center gap-4 text-4xl md:text-6xl">
+          <p className="row-title mega mt-3 flex items-center gap-4 text-5xl md:text-8xl">
             {next.name} <Arrow className="row-arrow size-7 text-muted" />
           </p>
         </Link>

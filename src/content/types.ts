@@ -32,6 +32,8 @@ export type Experience = {
   location?: string;
   startDate?: string;
   endDate?: string;
+  /** Shown when exact dates are not confirmed yet, e.g. "1 year · full-time". */
+  periodNote?: string;
   evidenceStatus: EvidenceStatus;
   summary: string;
   /** Only work Abraham personally did, each line traceable to a source. */

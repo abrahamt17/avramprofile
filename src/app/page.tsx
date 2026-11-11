@@ -1,70 +1,109 @@
+import Image from "next/image";
 import Link from "next/link";
 import { GridField, LocalTime } from "@/components/chrome-client";
 import { LensText } from "@/components/lens";
-import { LensSwitch } from "@/components/lens-switch";
+import { LensWords } from "@/components/lens-switch";
 import { Arrow, ButtonLink, ProjectRow, SectionHead } from "@/components/ui";
 import { cvVariants } from "@/content/cv";
-import { experience } from "@/content/experience";
-import { headline, intro, lenses, profile, story } from "@/content/profile";
+import { experience, rolePeriod } from "@/content/experience";
+import { headline, intro, lenses, profile, stats, verbs } from "@/content/profile";
 import { featuredProjects } from "@/content/projects";
 
 export default function Home() {
   return (
     <>
-      {/* ── Hero ── */}
+      {/* ── Hero: three words and a face ── */}
       <section className="relative overflow-hidden border-b border-line">
         <GridField />
-        <div className="wrap relative pb-16 pt-20 md:pb-24 md:pt-32">
+        <div className="wrap relative pt-10 md:pt-16">
+          <h1 className="sr-only">
+            {profile.name}. {headline.map((part) => part.text).join(" ")}
+          </h1>
+
           <p className="label rise">
             {profile.name} · {profile.location}
             <LocalTime timeZone={profile.timeZone} />
           </p>
 
-          <h1
-            className="display rise mt-7 max-w-5xl text-[clamp(2.5rem,7.2vw,6rem)]"
-            style={{ "--i": 1 } as React.CSSProperties}
-          >
-            {headline.map((part, i) => (
-              <span key={part.lens}>
-                <span className="headline-part" data-part={part.lens}>
-                  {part.text}
-                </span>
-                {i < headline.length - 1 ? " " : ""}
-              </span>
-            ))}
-          </h1>
+          <div className="relative mt-6 md:mt-8">
+            <div className="rise relative z-10" style={{ "--i": 1 } as React.CSSProperties}>
+              <LensWords />
+            </div>
+
+          </div>
 
           <div
-            className="rise mt-10 grid gap-8 md:mt-14 md:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] md:gap-16"
-            style={{ "--i": 2 } as React.CSSProperties}
+            className="rise relative z-10 grid gap-8 pb-12 pt-8 md:max-w-[58%] md:pb-20 md:pt-12"
+            style={{ "--i": 3 } as React.CSSProperties}
           >
             <div>
-              <p className="label mb-3">Read me as</p>
-              <LensSwitch />
-              <p className="mt-4 max-w-xs text-xs leading-relaxed text-muted">
-                Same person, same facts. The lens only changes what the site puts first.
-              </p>
-            </div>
-            <div>
-              <LensText text={intro} as="p" className="text-lg leading-relaxed md:text-xl" />
-              <div className="mt-7 flex flex-wrap gap-3">
-                <ButtonLink href="/projects">
-                  View projects <Arrow />
-                </ButtonLink>
-                {cvVariants.map((cv) => (
-                  <span key={cv.id} data-lens-show={cv.id}>
-                    <ButtonLink href={`/cv/${cv.fileName}`} variant="ghost" download>
-                      Download CV
-                    </ButtonLink>
+              {verbs.map((verb) => (
+                <p key={verb.lens} data-lens-show={verb.lens} className="serif text-3xl md:text-4xl">
+                  {verb.line}
+                </p>
+              ))}
+              <LensText text={intro} as="p" className="prose-p mt-4 max-w-xl text-lg" />
+              <p className="label mt-4">
+                {lenses.map((lens) => (
+                  <span key={lens.id} data-lens-show={lens.id}>
+                    Reading as: {lens.label} · press a word to change
                   </span>
                 ))}
-                <ButtonLink href="/contact" variant="ghost">
-                  Contact
-                </ButtonLink>
-              </div>
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <ButtonLink href="/projects">
+                View projects <Arrow />
+              </ButtonLink>
+              {cvVariants.map((cv) => (
+                <span key={cv.id} data-lens-show={cv.id}>
+                  <ButtonLink href={`/cv/${cv.fileName}`} variant="ghost" download>
+                    Download CV
+                  </ButtonLink>
+                </span>
+              ))}
+              <ButtonLink href="/contact" variant="ghost">
+                Contact
+              </ButtonLink>
             </div>
           </div>
+
+          {/* Desktop: the portrait stands at the right edge and overlaps the words. */}
+          <div
+            className="portrait rise absolute bottom-0 right-0 z-20 hidden w-[36%] max-w-[29rem] md:block"
+            style={{ "--i": 2 } as React.CSSProperties}
+          >
+            <Image src="/abraham.webp" alt="Portrait of Abraham Tikuye" width={949} height={1280} priority sizes="(min-width: 768px) 36vw, 70vw" />
+          </div>
+
+          {/* Phone: the portrait sits under the text. */}
+          <div className="portrait relative mx-auto -mb-6 w-[72%] max-w-xs md:hidden">
+            <Image src="/abraham.webp" alt="Portrait of Abraham Tikuye" width={949} height={1280} sizes="70vw" />
+          </div>
         </div>
+      </section>
+
+      {/* ── Numbers ── */}
+      <section aria-label="In numbers" className="border-b border-line">
+        <dl className="wrap grid grid-cols-2 md:grid-cols-4">
+          {stats.map((stat, i) => (
+            <div
+              key={stat.label}
+              className={`reveal flex flex-col-reverse justify-end gap-3 py-8 md:py-12 ${
+                i % 2 === 1 ? "border-l border-line pl-5 md:pl-8" : ""
+              } ${i >= 2 ? "border-t border-line md:border-t-0" : ""} ${i === 2 ? "md:border-l md:pl-8" : ""}`}
+            >
+              <dt className="max-w-[14rem] text-sm leading-snug text-muted">
+                {stat.label}
+                <span className="label mt-1.5 block text-[0.62rem]">{stat.source}</span>
+              </dt>
+              <dd className="mega text-[clamp(3.5rem,9vw,6.5rem)]">
+                {stat.value}
+                {stat.unit && <span className="ml-1 text-[0.4em] text-accent-text">{stat.unit}</span>}
+              </dd>
+            </div>
+          ))}
+        </dl>
       </section>
 
       {/* ── Selected work ── */}
@@ -102,68 +141,9 @@ export default function Home() {
               <div className="grid items-baseline gap-x-8 gap-y-1 md:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)_auto]">
                 <h3 className="row-title text-xl font-medium tracking-tight">{role.organization}</h3>
                 <p className="text-muted">{role.title}</p>
-                <p className="label">
-                  {role.startDate ? `${role.startDate} – ${role.endDate ?? "present"}` : role.location}
-                </p>
+                <p className="label">{rolePeriod(role)}</p>
               </div>
             </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* ── Story ── */}
-      <section className="wrap pt-20 md:pt-28">
-        <SectionHead
-          index="03"
-          title="The short version"
-          aside={
-            <Link href="/about" className="link">
-              About me
-            </Link>
-          }
-        />
-        <ol className="grid gap-px overflow-hidden rounded-2xl border border-line bg-line md:grid-cols-4">
-          {story.map((step, i) => (
-            <li key={step.title} className="reveal bg-bg p-6 md:p-7">
-              <p className="label flex items-center gap-2">
-                <span
-                  aria-hidden
-                  className={`inline-block size-2 rounded-full ${i === story.length - 1 ? "bg-accent ring-1 ring-fg/30" : "border border-line-strong"}`}
-                />
-                {step.year}
-              </p>
-              <h3 className="mt-4 text-lg font-medium tracking-tight">{step.title}</h3>
-              <p className="prose-p mt-2 text-sm">{step.body}</p>
-            </li>
-          ))}
-        </ol>
-      </section>
-
-      {/* ── Three focus areas ── */}
-      <section className="wrap pt-20 md:pt-28">
-        <SectionHead index="04" title="One profile, three CVs" />
-        <div className="grid gap-4 md:grid-cols-3">
-          {cvVariants.map((cv, i) => (
-            <div
-              key={cv.id}
-              data-lens-dim={cv.id}
-              className="reveal flex flex-col justify-between rounded-2xl border border-line p-6 md:p-7"
-            >
-              <div>
-                <p className="label">
-                  {String(i + 1).padStart(2, "0")} · {lenses[i].short}
-                </p>
-                <h3 className="mt-4 text-2xl font-medium tracking-tight">{cv.label}</h3>
-                <ul className="mt-4 space-y-1 text-sm text-muted">
-                  {cv.suits.map((role) => (
-                    <li key={role}>{role}</li>
-                  ))}
-                </ul>
-              </div>
-              <a href={`/cv/${cv.fileName}`} download className="link mt-8 self-start text-sm">
-                Download PDF
-              </a>
-            </div>
           ))}
         </div>
       </section>

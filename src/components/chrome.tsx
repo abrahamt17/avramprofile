@@ -29,9 +29,8 @@ export function SiteFooter() {
     <footer className="no-print mt-28 border-t border-line">
       <div className="wrap py-14 md:py-20">
         <p className="label">Next step</p>
-        <Link href="/contact" className="display mt-4 block text-[clamp(2.4rem,7vw,5.5rem)]">
-          Let&rsquo;s <span className="serif">talk</span>
-          <span className="text-accent-text">.</span>
+        <Link href="/contact" className="mega mt-4 block text-[clamp(4rem,16vw,12rem)] transition-colors hover:text-accent-text">
+          Let&rsquo;s talk<span className="text-accent-text">.</span>
         </Link>
 
         <div className="mt-14 grid gap-10 border-t border-line pt-8 md:grid-cols-[1fr_auto_auto] md:gap-16">

@@ -301,7 +301,7 @@ export const projects: Project[] = [
     id: "grievance-portal",
     name: "Grievance Portal Showcase",
     role: "Frontend developer",
-    tagline: "A public, sanitised version of the portal I worked on during my Fayda internship.",
+    tagline: "A public, sanitised version of the portal I worked on at Fayda.",
     angle: {
       "ai-tech": "An operations interface in React and TypeScript: queue table, search, pagination and case detail.",
       product: "An interface designed around how operations staff find and resolve a case.",

@@ -1,5 +1,5 @@
 import { education } from "./profile.ts";
-import { experience } from "./experience.ts";
+import { experience, rolePeriod } from "./experience.ts";
 import { getProject } from "./projects.ts";
 import type { CvEntry, CvVariant, Lens } from "./types.ts";
 
@@ -13,6 +13,7 @@ import type { CvEntry, CvVariant, Lens } from "./types.ts";
 
 const fayda = experience.find((e) => e.id === "fayda")!;
 const aigot = experience.find((e) => e.id === "aigot")!;
+const sic = experience.find((e) => e.id === "sic")!;
 
 function period(start?: string, end?: string): string | undefined {
   if (!start && !end) return undefined;
@@ -30,8 +31,12 @@ function experienceEntries(faydaBullets: string[]): CvEntry[] {
     {
       heading: `${fayda.title} — ${fayda.organization}`,
       sub: fayda.location,
-      period: period(fayda.startDate, fayda.endDate),
+      period: fayda.startDate ? period(fayda.startDate, fayda.endDate) : rolePeriod(fayda),
       bullets: faydaBullets,
+    },
+    {
+      heading: `${sic.organization} — ${sic.title.replace(" · ", ", ")}`,
+      bullets: [sic.summary],
     },
   ];
 }
@@ -76,12 +81,10 @@ export const cvVariants: CvVariant[] = [
             "Built the full prototype in Next.js and TypeScript with separate trainee and psychologist portals.",
             "Implemented an AI tutor that answers from lesson material using embeddings and retrieval, with rules that stop it diagnosing or judging fitness to fly.",
             "Put all model calls behind one provider interface, with a labelled fallback when no AI provider is configured.",
-            "Covered the journey, permissions and AI plan generation with automated tests.",
           ]),
           projectEntry("agentcover", "ai-tech", [
             "Built the multi-tenant foundation: authentication, organisations, roles, invitations and audit log.",
             "Enforced access with Postgres Row Level Security and tested the rules on an in-process Postgres.",
-            "Shared one Zod schema per form between browser and server.",
           ]),
           projectEntry("creatorpay", "ai-tech", [
             "Built campaign, payroll, escrow and batch-payout interfaces in React and TypeScript on Supabase.",

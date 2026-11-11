@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ButtonLink, PageIntro, SectionHead } from "@/components/ui";
 import { about, education, profile, story } from "@/content/profile";
 
@@ -53,6 +54,19 @@ export default function AboutPage() {
             </p>
           ))}
         </div>
+      </section>
+
+      <section className="wrap pt-16 md:pt-24">
+        <figure className="reveal overflow-hidden rounded-2xl border border-line">
+          <Image
+            src="/abraham-event.webp"
+            alt="Abraham Tikuye at a table with a laptop during an event at co-work Timișoara"
+            width={1400}
+            height={1335}
+            sizes="(min-width: 1152px) 1072px, 100vw"
+            className="aspect-[4/3] w-full object-cover object-[50%_30%] md:aspect-[21/9]"
+          />
+        </figure>
       </section>
 
       <section className="wrap pt-20 md:pt-28">

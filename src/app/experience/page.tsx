@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Chips, PageIntro, SectionHead } from "@/components/ui";
-import { experience } from "@/content/experience";
+import { experience, rolePeriod } from "@/content/experience";
 import { education } from "@/content/profile";
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export default function ExperiencePage() {
         kicker="Experience"
         title={
           <>
-            Two roles, described <span className="serif">exactly</span> as they were.
+            Where I have worked, described <span className="serif">exactly</span> as it was.
           </>
         }
       >
@@ -33,9 +33,7 @@ export default function ExperiencePage() {
             <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] md:gap-16">
               <header>
                 <p className="label">
-                  {[role.startDate && `${role.startDate} – ${role.endDate ?? "present"}`, role.location]
-                    .filter(Boolean)
-                    .join(" · ")}
+                  {[...new Set([rolePeriod(role), role.location])].filter(Boolean).join(" · ")}
                 </p>
                 <h2 className="display mt-4 text-3xl md:text-4xl">{role.organization}</h2>
                 <p className="mt-2 text-lg text-muted">{role.title}</p>

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
+import { Anton, Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import { SiteFooter, SiteHeader } from "@/components/chrome";
 import { CommandPalette } from "@/components/command-palette";
 import { profile } from "@/content/profile";
@@ -9,6 +9,7 @@ import "./globals.css";
 
 const geist = Geist({ subsets: ["latin", "latin-ext"], variable: "--font-geist", display: "swap" });
 const geistMono = Geist_Mono({ subsets: ["latin", "latin-ext"], variable: "--font-geist-mono", display: "swap" });
+const anton = Anton({ subsets: ["latin", "latin-ext"], weight: "400", variable: "--font-anton", display: "swap" });
 const instrument = Instrument_Serif({
   subsets: ["latin", "latin-ext"],
   weight: "400",
@@ -51,7 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       data-lens="ai-tech"
       data-theme="light"
       suppressHydrationWarning
-      className={`${geist.variable} ${geistMono.variable} ${instrument.variable}`}
+      className={`${geist.variable} ${geistMono.variable} ${instrument.variable} ${anton.variable}`}
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: prefsScript }} />

@@ -16,12 +16,16 @@ export function PageIntro({
   children?: ReactNode;
 }) {
   return (
-    <section className="wrap pb-12 pt-16 md:pb-16 md:pt-24">
+    <section className="wrap pb-12 pt-10 md:pb-16 md:pt-16">
       <p className="label rise">
         <span className="text-accent-text">{index}</span> — {kicker}
       </p>
-      <h1 className="display rise mt-5 max-w-4xl text-[clamp(2.3rem,6vw,4.6rem)]" style={{ "--i": 1 } as React.CSSProperties}>
-        {title}
+      <h1 className="rise mt-4" style={{ "--i": 1 } as React.CSSProperties}>
+        <span className="mega block text-[clamp(4rem,15vw,11rem)]">
+          {kicker}
+          <span className="text-accent-text">.</span>
+        </span>
+        <span className="display mt-6 block max-w-3xl text-[clamp(1.6rem,3.4vw,2.6rem)] leading-[1.1]">{title}</span>
       </h1>
       {children && (
         <div className="prose-p rise mt-7 max-w-2xl text-lg" style={{ "--i": 2 } as React.CSSProperties}>
@@ -96,7 +100,7 @@ export function ProjectRow({ project, index }: { project: Project; index: number
     <Link href={`/projects/${project.id}`} className="row reveal group px-1 py-7 md:px-3 md:py-9">
       <div className="grid items-baseline gap-x-8 gap-y-3 md:grid-cols-[3rem_minmax(0,1fr)_minmax(0,1.3fr)_auto]">
         <span className="label">{String(index + 1).padStart(2, "0")}</span>
-        <h3 className="row-title display text-3xl md:text-[2.6rem]">{project.name}</h3>
+        <h3 className="row-title mega text-5xl md:text-[4.2rem]">{project.name}</h3>
         <div>
           <LensText text={project.angle} as="p" className="prose-p text-[0.98rem]" />
           <div className="mt-3">

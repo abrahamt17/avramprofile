@@ -42,7 +42,7 @@ export default function ContactPage() {
           >
             <div className="grid items-baseline gap-x-8 gap-y-2 md:grid-cols-[8rem_minmax(0,1fr)_auto_auto]">
               <span className="label">{channel.label}</span>
-              <span className="row-title display text-3xl md:text-5xl">{channel.value}</span>
+              <span className="row-title mega text-4xl md:text-7xl">{channel.value}</span>
               <span className="text-sm text-muted">{channel.note}</span>
               <Arrow className="row-arrow hidden text-muted md:block" />
             </div>

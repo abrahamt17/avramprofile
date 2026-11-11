@@ -29,6 +29,24 @@ export const headline: { lens: Lens; text: string }[] = [
   { lens: "marketing", text: "and help turn complex ideas into useful solutions." },
 ];
 
+/** The hero's three words. Each one is a lens. */
+export const verbs: { lens: Lens; word: string; line: string }[] = [
+  { lens: "ai-tech", word: "Build", line: "I build with technology." },
+  { lens: "product", word: "Plan", line: "I think in products." },
+  { lens: "marketing", word: "Explain", line: "I turn complex ideas into useful solutions." },
+];
+
+/**
+ * Numbers on the home page. Each one is countable and has a source.
+ * Add a number only if it is real and Abraham's own.
+ */
+export const stats: { value: string; unit?: string; label: string; source: string }[] = [
+  { value: "1", unit: "yr", label: "Full-time at Ethiopia's national ID programme", source: "Software Developer, Fayda" },
+  { value: "2", label: "Products founded and built", source: "AgentCover, AeroMind" },
+  { value: "31", label: "Public repositories on GitHub", source: "github.com/abrahamt17, Nov 2026" },
+  { value: "3", label: "Countries studied and worked in", source: "Ethiopia, Italy, Romania" },
+];
+
 export const intro: LensText = {
   "ai-tech":
     "Software and AI-focused builder with a Computer Science background. I work mostly in TypeScript, React and Next.js, connect language models to real workflows, and test what I ship.",
@@ -45,9 +63,9 @@ export const story: { year: string; title: string; body: string }[] = [
     body: "I started with software. I studied Computer Science at the University of Gondar for about three years and did not complete the degree.",
   },
   {
-    year: "2024",
+    year: "1 year",
     title: "A national-scale system",
-    body: "I interned at National ID Ethiopia (Fayda), where I worked on the frontend of a grievance management portal.",
+    body: "I worked full-time for a year at National ID Ethiopia (Fayda), mainly on the frontend of a grievance management portal.",
   },
   {
     year: "2024",
@@ -65,7 +83,7 @@ export const about = {
   lead: "I did not leave technology for management. I added management to technology.",
   paragraphs: [
     "I began where most developers begin: writing code because it was fun. Computer Science at the University of Gondar gave me the foundations, and frontend work gave me something to show people. I left before finishing that degree, and I say so plainly.",
-    "An internship at National ID Ethiopia changed how I saw software. The portal I worked on was one small part of a very large public system, and it mattered less how clever the code was than whether an operator could find a case and resolve it.",
+    "A year at National ID Ethiopia changed how I saw software. The portal I worked on was one small part of a very large public system, and it mattered less how clever the code was than whether an operator could find a case and resolve it.",
     "That is why I chose Engineering Management next. I wanted to understand the parts around the code: how work is scoped, how decisions and trade-offs are made, and how a team gets from an idea to something people can use.",
     "Today I work where those meet. I build AI-enabled products, I write their specifications and roadmaps, and I care about explaining them honestly, including what is not built yet.",
   ],
