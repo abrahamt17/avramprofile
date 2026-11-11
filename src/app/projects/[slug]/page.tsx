@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LensText } from "@/components/lens";
@@ -103,6 +104,27 @@ export default async function CaseStudyPage({ params }: Params) {
       </header>
 
       <div className="wrap">
+        {project.previewImages && (
+          <div className={`grid gap-5 ${project.previewImages.length > 1 ? "md:grid-cols-2" : ""}`}>
+            {project.previewImages.map((preview) => (
+              <figure key={preview.src} className="reveal overflow-hidden rounded-2xl border border-line bg-surface">
+                <Image
+                  src={preview.src}
+                  alt={preview.alt}
+                  width={1440}
+                  height={900}
+                  priority
+                  className="h-auto w-full"
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                />
+                <figcaption className="border-t border-line px-5 py-3 text-xs text-muted">
+                  {preview.alt} · captured from the live site
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        )}
+
         {project.flow && <FlowDiagram steps={project.flow.steps} caption={project.flow.caption} />}
 
         <div className="mt-12 md:mt-16">

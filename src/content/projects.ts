@@ -109,9 +109,16 @@ export const projects: Project[] = [
       "It does not issue policies or make coverage decisions.",
       "Risk insights are educational, not regulated insurance or legal advice.",
     ],
-    links: [],
+    links: [
+      { label: "Repository", url: "https://github.com/abrahamt17/agentcover" },
+      { label: "Live site", url: "https://agentcover.abrahamt.work/" },
+      { label: "Vercel preview", url: "https://agentcover-abrahamt17s-projects.vercel.app/" },
+    ],
+    previewImages: [
+      { src: "/projects/agentcover-landing.png", alt: "AgentCover landing page" },
+    ],
     evidenceStatus: "verified",
-    source: "Project repository README, roadmap and source code (private repository), reviewed November 2026.",
+    source: "Public GitHub repository: github.com/abrahamt17/agentcover.",
   },
   {
     id: "aeromind",
@@ -191,7 +198,7 @@ export const projects: Project[] = [
     outcomes: [
       "The MVP journey works end to end for both roles and is covered by automated tests, including database permissions.",
       "The AI tutor and development plans have been tested with real model responses.",
-      "Entered in the SIC competition as a three-person team, with a pitch deck and a working product to show.",
+      "Contended in Startup Ideas Competition 2026 with a three-person team, a pitch deck, and a working AeroMind MVP.",
       "Not deployed. No real users, no revenue, and no real psychological data: everything shown is sample data, and the business figures are estimates.",
     ],
     learnings: [
@@ -228,7 +235,14 @@ export const projects: Project[] = [
       "Qualified professionals remain responsible for assessments and decisions.",
       "All data in the prototype is sample data.",
     ],
-    links: [{ label: "Repository", url: "https://github.com/abrahamt17/Aeromind" }],
+    links: [
+      { label: "Repository", url: "https://github.com/abrahamt17/Aeromind" },
+      { label: "Live site", url: "https://aeromindavi.vercel.app/" },
+    ],
+    previewImages: [
+      { src: "/projects/aeromind-landing.png", alt: "AeroMind landing page" },
+      { src: "/projects/aeromind-academy.png", alt: "AeroMind Academy course page" },
+    ],
     evidenceStatus: "verified",
     source: "Public repository (README, project notes, source code, commit history) and the team's pitch deck, both November 2026.",
   },
@@ -307,7 +321,7 @@ export const projects: Project[] = [
     },
     links: [
       { label: "Repository", url: "https://github.com/abrahamt17/engage-royal-flow" },
-      { label: "Live demo", url: "https://engage-royal-flow.vercel.app" },
+      { label: "Live site", url: "https://engage-royal-flow.vercel.app/" },
     ],
     evidenceStatus: "user-confirmation-needed",
     source:

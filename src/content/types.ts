@@ -80,6 +80,7 @@ export type Project = {
   /** Safety or legal boundaries the product keeps. */
   boundaries?: string[];
   links: { label: string; url: string }[];
+  previewImages?: { src: string; alt: string }[];
   evidenceStatus: EvidenceStatus;
   /** Where the facts on this page come from. Shown on the case study. */
   source: string;

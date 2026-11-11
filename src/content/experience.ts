@@ -52,13 +52,18 @@ export const experience: Experience[] = [
   },
   {
     id: "sic",
-    organization: "SIC competition",
+    organization: "Startup Ideas Competition 2026",
     title: "Contender · product and technical lead",
     evidenceStatus: "user-confirmation-needed",
     summary:
-      "Entered AeroMind as a team of three. I led the product and the technical work: I built the whole MVP, coordinated my two teammates, and wrote the product plan and the business case.",
-    bullets: [],
+      "AeroMind was the idea I brought to Startup Ideas Competition 2026 as part of a three-person team. I led product and technical work, built the working MVP, coordinated my teammates, and helped develop the product plan, business case, and pitch. The competition was an experience in taking an idea through teamwork and making it tangible; AeroMind is the project that grew from it.",
+    bullets: [
+      "Built the first AeroMind landing page as part of presenting the idea.",
+      "Built the working MVP and led the product and technical direction.",
+      "Worked with two teammates on the product plan, business case, and pitch deck.",
+    ],
     technologies: [],
+    links: [{ label: "Startup Ideas Competition 2026 event", url: "https://www.facebook.com/events/zbor-hub-timi%C8%99oara/startup-ideas-competition-2026/1338595796011984/" }],
   },
 ];
 

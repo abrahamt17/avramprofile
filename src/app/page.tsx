@@ -106,28 +106,10 @@ export default function Home() {
         </dl>
       </section>
 
-      {/* ── Selected work ── */}
-      <section className="wrap pt-20 md:pt-28">
-        <SectionHead
-          index="01"
-          title="Selected work"
-          aside={
-            <Link href="/projects" className="link">
-              All projects
-            </Link>
-          }
-        />
-        <div>
-          {featuredProjects.map((project, i) => (
-            <ProjectRow key={project.id} project={project} index={i} />
-          ))}
-        </div>
-      </section>
-
       {/* ── Experience ── */}
       <section className="wrap pt-20 md:pt-28">
         <SectionHead
-          index="02"
+          index="01"
           title="Experience"
           aside={
             <Link href="/experience" className="link">
@@ -144,6 +126,24 @@ export default function Home() {
                 <p className="label">{rolePeriod(role)}</p>
               </div>
             </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* ── Selected work ── */}
+      <section className="wrap pt-20 md:pt-28">
+        <SectionHead
+          index="02"
+          title="Selected work"
+          aside={
+            <Link href="/projects" className="link">
+              All projects
+            </Link>
+          }
+        />
+        <div>
+          {featuredProjects.map((project, i) => (
+            <ProjectRow key={project.id} project={project} index={i} />
           ))}
         </div>
       </section>

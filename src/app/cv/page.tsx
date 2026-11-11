@@ -7,7 +7,7 @@ import type { CvVariant } from "@/content/types";
 
 export const metadata: Metadata = {
   title: "CV",
-  description: "Three tailored CVs for Abraham Tikuye: AI & Technology, Product & Engineering Management, and Technical Marketing.",
+  description: "A blended CV and three tailored CVs for Abraham Tikuye: AI & Technology, Product & Engineering Management, and Technical Marketing.",
   alternates: { canonical: "/cv" },
 };
 
@@ -72,18 +72,18 @@ export default function CvPage() {
         kicker="CV"
         title={
           <>
-            One person, three CVs. Pick the one that fits the <span className="serif">role</span>.
+            One person, four CVs. Three specializations and one <span className="serif">blended</span> profile.
           </>
         }
       >
         <p>
-          The facts are identical in all three. Each version changes the order and the emphasis, so the reader sees
-          the most relevant work first.
+          The three specialized versions change the order and emphasis for a particular role. The blended CV brings
+          those areas together in one broader profile.
         </p>
       </PageIntro>
 
       <section className="wrap no-print">
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           {cvVariants.map((cv, i) => (
             <div key={cv.id} data-lens-dim={cv.id} className="reveal flex flex-col rounded-2xl border border-line p-6 md:p-7">
               <p className="label">{String(i + 1).padStart(2, "0")}</p>
@@ -101,6 +101,18 @@ export default function CvPage() {
               </div>
             </div>
           ))}
+          <div className="reveal flex flex-col rounded-2xl border border-accent/50 bg-surface p-6 md:p-7">
+            <p className="label text-accent-text">04 · All-round profile</p>
+            <h2 className="mt-3 text-2xl font-medium tracking-tight">Blended CV</h2>
+            <p className="prose-p mt-3 text-sm">
+              A single CV combining software and AI, product work, engineering management, and technical communication.
+            </p>
+            <div className="mt-auto pt-8">
+              <ButtonLink href="/cv/Abraham_Tikuye_Blended_CV.pdf" download>
+                Download PDF
+              </ButtonLink>
+            </div>
+          </div>
         </div>
       </section>
 
