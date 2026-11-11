@@ -1,0 +1,293 @@
+@import "tailwindcss";
+
+/* ───────── Tokens ───────── */
+:root {
+  --bg: #f4f1ea;
+  --surface: #ebe7dc;
+  --fg: #15150f;
+  --muted: #63625a;
+  --line: rgb(21 21 15 / 0.14);
+  --line-strong: rgb(21 21 15 / 0.32);
+  --accent: #c5f235;
+  --accent-fg: #15150f;
+  /* Accent used as text or a thin stroke: darker in light mode for contrast. */
+  --accent-text: #4a6400;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0d0e0b;
+  --surface: #161712;
+  --fg: #eeebe1;
+  --muted: #96958b;
+  --line: rgb(238 235 225 / 0.13);
+  --line-strong: rgb(238 235 225 / 0.3);
+  --accent-text: #c5f235;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --color-accent-text: var(--accent-text);
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SFMono-Regular", monospace;
+  --font-serif: var(--font-instrument), ui-serif, Georgia, serif;
+}
+
+/* ───────── Base ───────── */
+html {
+  background: var(--bg);
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-fg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* In the components layer so Tailwind utilities can still override them. */
+@layer components {
+.wrap {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+@media (min-width: 768px) {
+  .wrap {
+    padding-inline: 2.5rem;
+  }
+}
+
+/* Small mono label used all over the site. */
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.serif {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.display {
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+  text-wrap: balance;
+}
+
+.prose-p {
+  color: var(--muted);
+  line-height: 1.65;
+  text-wrap: pretty;
+}
+
+/* Underlined text link with an accent sweep. */
+.link {
+  background: linear-gradient(var(--accent), var(--accent)) no-repeat 0 100% / 100% 1px;
+  padding-bottom: 1px;
+  transition: background-size 0.2s ease, color 0.2s ease;
+}
+.link:hover {
+  background-size: 100% 100%;
+  color: var(--accent-fg);
+}
+}
+
+/* ───────── Lens: one identity, three emphases ─────────
+   The chosen lens lives on <html data-lens>. Everything below reacts in CSS,
+   so there is no flash and no re-render when it changes. */
+[data-lens-show] {
+  display: none;
+}
+[data-lens="ai-tech"] [data-lens-show="ai-tech"],
+[data-lens="product"] [data-lens-show="product"],
+[data-lens="marketing"] [data-lens-show="marketing"] {
+  display: revert;
+}
+
+.headline-part {
+  opacity: 0.3;
+  background: linear-gradient(var(--accent), var(--accent)) no-repeat 0 88% / 0% 0.34em;
+  transition: opacity 0.35s ease, background-size 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+[data-lens="ai-tech"] .headline-part[data-part="ai-tech"],
+[data-lens="product"] .headline-part[data-part="product"],
+[data-lens="marketing"] .headline-part[data-part="marketing"] {
+  opacity: 1;
+  background-size: 100% 0.34em;
+}
+:root[data-theme="dark"] .headline-part {
+  background-image: linear-gradient(rgb(197 242 53 / 0.38), rgb(197 242 53 / 0.38));
+}
+
+/* Rows that belong to a lens are emphasised when it is active. */
+[data-lens-dim] {
+  transition: opacity 0.3s ease;
+}
+[data-lens="ai-tech"] [data-lens-dim]:not([data-lens-dim~="ai-tech"]),
+[data-lens="product"] [data-lens-dim]:not([data-lens-dim~="product"]),
+[data-lens="marketing"] [data-lens-dim]:not([data-lens-dim~="marketing"]) {
+  opacity: 0.42;
+}
+
+/* ───────── Hero grid with pointer spotlight ───────── */
+.grid-field {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 44px 44px;
+  background-position: center top;
+  -webkit-mask-image: radial-gradient(520px circle at var(--mx, 78%) var(--my, 18%), #000 0%, transparent 72%);
+  mask-image: radial-gradient(520px circle at var(--mx, 78%) var(--my, 18%), #000 0%, transparent 72%);
+}
+
+/* ───────── Scroll reveal (progressive enhancement, no JS) ───────── */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 38%;
+    }
+  }
+}
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .rise {
+    animation: rise 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    animation-delay: calc(var(--i, 0) * 70ms);
+  }
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ───────── Work rows ───────── */
+.row {
+  position: relative;
+  display: block;
+  border-top: 1px solid var(--line);
+  transition: background-color 0.2s ease, padding 0.25s ease;
+}
+.row:last-child {
+  border-bottom: 1px solid var(--line);
+}
+a.row:hover {
+  background: var(--surface);
+}
+.row .row-arrow {
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), color 0.2s ease;
+}
+a.row:hover .row-arrow {
+  transform: translate(4px, -4px);
+  color: var(--accent-text);
+}
+a.row:hover .row-title {
+  transform: translateX(6px);
+}
+.row-title {
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* ───────── Command palette ───────── */
+dialog.palette {
+  width: min(36rem, calc(100vw - 1.5rem));
+  max-height: min(32rem, calc(100dvh - 4rem));
+  margin: 12vh auto auto;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  border: 1px solid var(--line-strong);
+  border-radius: 14px;
+  box-shadow: 0 30px 80px -20px rgb(0 0 0 / 0.45);
+  overflow: hidden;
+}
+dialog.palette::backdrop {
+  background: rgb(10 10 8 / 0.55);
+  backdrop-filter: blur(3px);
+}
+dialog.palette[open] {
+  display: flex;
+  flex-direction: column;
+}
+@media (prefers-reduced-motion: no-preference) {
+  dialog.palette[open] {
+    animation: rise 0.22s ease both;
+  }
+}
+
+/* ───────── Print: the CV page prints as a clean document ───────── */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #fff;
+    color: #000;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
